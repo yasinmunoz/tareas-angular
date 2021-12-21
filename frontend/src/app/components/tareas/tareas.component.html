@@ -1,0 +1,51 @@
+<div class="row">
+
+    <!-- FORM -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body p-4">
+
+                <!-- FORM -->
+                <form #tareaForm="ngForm" (ngSubmit)="addTarea(tareaForm)">
+                    <!-- THE Id's tarea -->
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="tareaService.selectedTarea._id">
+
+                    <div class="form-group">
+                        <input type="text" name="titulo" #name="ngModel" [(ngModel)]="tareaService.selectedTarea.titulo" placeholder="Introduce el título" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="descripcion" #name="ngModel" [(ngModel)]="tareaService.selectedTarea.descripcion" placeholder="Introduce la descripcion" class="form-control">
+                    </div>
+
+                    <input type="button" value="Clear" class="btn btn-danger mr-2" (click)="resetForm(tareaForm)">
+                    <button class="btn btn-secondary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="col-md-8">
+        <table class="table table-striped">
+            <thead>
+                <th>Título</th>
+                <th>Descripción</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tarea of tareaService.tareas">
+                    <td>{{ tarea.titulo }}</td>
+                    <td>{{ tarea.descripcion }}</td>
+                    <td>
+                        <a (click)="editTarea(tarea)" class="btn btn-secondary btn-sm">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a (click)="deleteTarea(tarea._id, tareaForm)" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash-fill"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
