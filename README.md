@@ -19,7 +19,7 @@ install the dependencies for the frontend.
 cd frontend
 npm install
 ``````
-## launching the app
+## Launching the app
 To start the express server....
 
 ```bash
