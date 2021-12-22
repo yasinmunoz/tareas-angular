@@ -10,14 +10,19 @@ git clone https://github.com/yasinmunoz/tareas-angular.git
 install the dependencies for the server.
 
 ```bash
-cd the-example-app.nodejs
+cd server
 npm install
 ```
-
-## Steps for read-only access
-
-To start the express server, run the following
+install the dependencies for the frontend.
 
 ```bash
-npm run start:dev
+cd frontend
+npm install
+``````
+
+To start the express server....
+
+```bash
+cd server
+npm run dev
 ```
