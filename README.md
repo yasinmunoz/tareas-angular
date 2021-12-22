@@ -26,3 +26,10 @@ To start the express server....
 cd server
 npm run dev
 ```
+
+To start the angular server....
+
+```bash
+cd frontend
+ng serve -o
+```
