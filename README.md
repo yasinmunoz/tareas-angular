@@ -6,7 +6,6 @@ Clone the repo
 
 ```bash
 git clone https://github.com/yasinmunoz/tareas-angular.git
-cd the-example-app.nodejs
 ```
 install the dependencies for the server.
 
